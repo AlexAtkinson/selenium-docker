@@ -1,0 +1,50 @@
+x-side-runner-template: &side-runner-template
+    image: selenium-side-runner
+    environment:
+      - SE_HOST=selenium-router
+    networks:
+      - selenium-grid
+    command:
+      - "-d -j \"--detectOpenHandles\""
+
+x-volumes-all: &volumes-all
+    volumes:
+      - '../out:/root/out'
+
+x-test-suite-test-site-x1: &test-site-x1
+    volumes:
+      - '../resources/tests/test-site/x_1:/sides'
+x-test-suite-test-site-x10: &test-site-x10
+    volumes:
+      - '../resources/tests/test-site/x_10:/sides'
+x-test-suite-test-site-xn: &test-site-xn
+    volumes:
+      - '../resources/tests/test-site/x_n:/sides'
+
+networks:
+  selenium-grid:
+    external: true
+
+# Wasn't there a bug that preventing merging of arrays?
+services:
+  selenium-side-runner-test-site-x1:
+    <<: [
+        *side-runner-template,
+        *volumes-all,
+        *test-site-x1
+      ]
+    profiles: ["","test-site-x1"]
+  selenium-side-runner-test-site-x10:
+    <<: [
+        *side-runner-template,
+        *volumes-all,
+        *test-site-x10
+      ]
+    profiles: ["test-site-x10"]
+  selenium-side-runner-test-site-xn:
+    <<: [
+        *side-runner-template,
+        *volumes-all,
+        *test-site-xn
+      ]
+    profiles: ["test-site-xn"]

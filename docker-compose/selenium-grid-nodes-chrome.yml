@@ -1,0 +1,83 @@
+x-node-service-template: &chrome-node-template
+  image: selenium/node-chrome:4.25.0-20240922
+  shm_size: 2gb
+  volumes:
+    - /dev/shm:/dev/shm
+  environment:
+    - SE_EVENT_BUS_HOST=selenium-event-bus
+    - SE_EVENT_BUS_PUBLISH_PORT=4442
+    - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    - SE_ENABLE_TRACING=true
+    - SE_OTEL_TRACES_EXPORTER=otlp
+    - SE_OTEL_EXPORTER_ENDPOINT=http://jaeger:4317
+    - SE_NODE_MAX_SESSIONS=3
+  networks:
+    - selenium-grid
+  extra_hosts:
+    - "host.docker.internal:host-gateway"
+
+networks:
+  selenium-grid:
+    external: true
+
+services:
+  selenium-node-chrome-1:
+    <<: *chrome-node-template
+    profiles: ["","run1","run3","run5","run10","run15","run20"]
+  selenium-node-chrome-2:
+    <<: *chrome-node-template
+    profiles: ["run3","run5","run10","run15","run20"]
+  selenium-node-chrome-3:
+    <<: *chrome-node-template
+    profiles: ["run3","run5","run10","run15","run20"]
+  selenium-node-chrome-4:
+    <<: *chrome-node-template
+    profiles: ["run5","run10","run15","run20"]
+  selenium-node-chrome-5:
+    <<: *chrome-node-template
+    profiles: ["run5","run10","run15","run20"]
+  selenium-node-chrome-6:
+    <<: *chrome-node-template
+    profiles: ["run10","run15","run20"]
+  selenium-node-chrome-7:
+    <<: *chrome-node-template
+    profiles: ["run10","run15","run20"]
+  selenium-node-chrome-8:
+    <<: *chrome-node-template
+    profiles: ["run10","run15","run20"]
+  selenium-node-chrome-9:
+    <<: *chrome-node-template
+    profiles: ["run10","run15","run20"]
+  selenium-node-chrome-10:
+    <<: *chrome-node-template
+    profiles: ["run10","run15","run20"]
+  selenium-node-chrome-11:
+    <<: *chrome-node-template
+    profiles: ["run15","run20"]
+  selenium-node-chrome-12:
+    <<: *chrome-node-template
+    profiles: ["run15","run20"]
+  selenium-node-chrome-13:
+    <<: *chrome-node-template
+    profiles: ["run15","run20"]
+  selenium-node-chrome-14:
+    <<: *chrome-node-template
+    profiles: ["run15","run20"]
+  selenium-node-chrome-15:
+    <<: *chrome-node-template
+    profiles: ["run15","run20"]
+  selenium-node-chrome-16:
+    <<: *chrome-node-template
+    profiles: ["run20"]
+  selenium-node-chrome-17:
+    <<: *chrome-node-template
+    profiles: ["run20"]
+  selenium-node-chrome-18:
+    <<: *chrome-node-template
+    profiles: ["run20"]
+  selenium-node-chrome-19:
+    <<: *chrome-node-template
+    profiles: ["run20"]
+  selenium-node-chrome-20:
+    <<: *chrome-node-template
+    profiles: ["run20"]

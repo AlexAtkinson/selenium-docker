@@ -1,0 +1,21 @@
+{
+  "id": "09ab0e1f-f924-4808-9329-a3a7ba240895",
+  "version": "2.0",
+  "name": "Test Site Selenium Demo",
+  "url": "URL_STUB",
+  "suites": [
+    {
+      "id": "8445e5a4-c6a6-4d5b-89dc-ffe404d5018e",
+      "name": "Default Suite",
+      "persistSession": false,
+      "parallel": true,
+      "timeout": 300,
+      "tests": []
+    }
+  ],
+  "urls": [
+    "URL_STUB/"
+  ],
+  "plugins": [],
+  "tests":[]
+}

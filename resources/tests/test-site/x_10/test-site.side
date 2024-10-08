@@ -1,0 +1,1047 @@
+{
+  "id": "09ab0e1f-f924-4808-9329-a3a7ba240895",
+  "version": "2.0",
+  "name": "Vite Demo",
+  "url": "http://host.docker.internal:8080",
+  "tests": [{
+    "id": "e30c32c8-71c9-44cf-b6f4-82361c1a3468",
+    "name": "Vite Test 1",
+    "commands": [{
+      "id": "f5544f6f-7ab3-4670-b93e-305195507f3a",
+      "comment": "Open Test Vite Site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "020be628-9e9e-44cf-a88f-98c6f7b9c1cc",
+      "comment": "Resize Window",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4458801d-1202-4212-a33d-db716d35d5c9",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94d940c6-13e8-444d-9a8b-84c117130db4",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f63e68b7-8a6c-4047-93d7-fef8c866cd34",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46b8f36c-98a4-40b3-aa7c-20f7c07cb0f9",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b5f9a89-f2a4-43cc-a1d1-446ca36ce871",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e991c5f-1dbf-4a93-b600-e7e17fa927e3",
+      "comment": "Assert Button Value Is 'count is 5'",
+      "command": "assertValue",
+      "target": "xpath=//button[contains(.,'count is 5')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0473b1c0-857c-4efb-a77b-8b9f5972f2df",
+      "comment": "Close the Window",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "76ebaf3f-64fc-4979-bc94-f3e176f7cb91",
+    "name": "Vite Test 2",
+    "commands": [{
+      "id": "dd4563f2-a5d1-458a-b8dc-d28af81fca37",
+      "comment": "Open Test Vite Site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ecfd4bfb-6e5d-41ff-9902-020d9ccceaf3",
+      "comment": "Resize Window",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d5620b1-2114-4602-9c1a-5db093858f8a",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "070930d6-f3d1-4065-bb0b-a1da3f6b2754",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "818e963b-ca60-4f17-81a5-26ce592d4b3a",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bee5a31-9cf8-44f0-bea5-2db602c9c5a3",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5712a4b0-fc64-4398-9d4c-24974ad38cdc",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cc741a1-ce36-4153-8789-28cbecaa0a14",
+      "comment": "Assert Button Value Is 'count is 5'",
+      "command": "assertValue",
+      "target": "xpath=//button[contains(.,'count is 5')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d905eac4-ef06-44c8-8b62-b0dcac7c8f39",
+      "comment": "Close the Window",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d128d43e-d2fd-4cc6-8605-16d9d6576e63",
+    "name": "Vite Test 3",
+    "commands": [{
+      "id": "fc93b077-07ef-42fb-aff6-b27aa7d761fd",
+      "comment": "Open Test Vite Site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c801e263-b805-43b0-8112-a12045468ec1",
+      "comment": "Resize Window",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "135753ec-cbf0-493b-b3d5-47f086a17ea0",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd1bf8fe-f230-474a-bbeb-ac7f956d27e6",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82171cdf-6a9b-4d1f-ab6d-77d5991c09fa",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2b716e5-8b94-4fee-a839-c0b469d261ae",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bb7915a-f303-4cf0-a948-71b69f49f191",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "035c4964-6d11-46f0-87c1-14005aa61a1c",
+      "comment": "Assert Button Value Is 'count is 5'",
+      "command": "assertValue",
+      "target": "xpath=//button[contains(.,'count is 5')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a623d3b-ff2a-4fb4-a2b5-32e68187fdb2",
+      "comment": "Close the Window",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8cb647b8-8a5f-49f7-b091-9e60748e7302",
+    "name": "Vite Test 4",
+    "commands": [{
+      "id": "355f81ed-d7cf-4817-8ac7-15dec062653d",
+      "comment": "Open Test Vite Site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1e237fb-3e36-43de-92e9-2654d479b727",
+      "comment": "Resize Window",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1936b136-8ac3-416a-8dd6-66dbae00ee58",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "15ae4610-2508-4f8f-9cb6-b31a1ff6c006",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d63d971-af00-4734-ac2f-a0925c1559e2",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c95fdd60-97c1-474b-88ee-b230c9b40f02",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1c41f8b-419c-4ee9-a982-99d3a9f0127c",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc87761e-e80f-4678-ad2c-e5c53ef91a6f",
+      "comment": "Assert Button Value Is 'count is 5'",
+      "command": "assertValue",
+      "target": "xpath=//button[contains(.,'count is 5')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd897619-05a6-4420-b8cb-19a788f26178",
+      "comment": "Close the Window",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f4a17e5a-627b-45bc-a8b7-1baec4226ce4",
+    "name": "Vite Test 5",
+    "commands": [{
+      "id": "fffc8b75-972f-4fdc-a3c4-ff921429008f",
+      "comment": "Open Test Vite Site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d3dd988-3b78-462d-a5cd-fc2e7b94aec3",
+      "comment": "Resize Window",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db86c3c4-4772-4998-a0b5-885b0b2e1a2b",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ed151d1-0a8c-4406-8a46-0b1ac7b516a9",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5caecda1-b7e0-4dd3-98ed-58ef5fe82ec8",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cdfb153-e499-404d-8512-8e94a282866a",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "602137af-b196-4245-bf9b-dc07d0acf158",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "174dee97-32dc-495a-ad24-fae7da98ba30",
+      "comment": "Assert Button Value Is 'count is 5'",
+      "command": "assertValue",
+      "target": "xpath=//button[contains(.,'count is 5')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4056ac79-424c-42dd-85b0-b1276b63e144",
+      "comment": "Close the Window",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "540c2906-c7a7-4fba-8b39-08f63419d413",
+    "name": "Vite Test 6",
+    "commands": [{
+      "id": "238ef3c3-85c6-4151-9594-e2c48d8f769e",
+      "comment": "Open Test Vite Site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85294553-dd2e-4253-a349-e3a0e53ce8b4",
+      "comment": "Resize Window",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63bac6f9-0958-4ed7-9425-7f1415ccef8a",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8cb7721-579c-434e-94c7-dcb884e693a1",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a15f4b4-22cb-4463-a586-2d86e7371d61",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4b0e647-858d-4efb-ae46-b14ba572d344",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "843e4fd9-7d06-4929-9e9e-97c2f47698d3",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "591a2d08-6ed2-452d-b8e7-ebd993fdcb63",
+      "comment": "Assert Button Value Is 'count is 5'",
+      "command": "assertValue",
+      "target": "xpath=//button[contains(.,'count is 5')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe19f292-a4d3-4039-9b72-cc788db9c84e",
+      "comment": "Close the Window",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d792fde5-c97f-4b82-ae3b-7042c9b1a1cc",
+    "name": "Vite Test 7",
+    "commands": [{
+      "id": "2d56c268-7283-4415-a583-06d6b134125f",
+      "comment": "Open Test Vite Site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ecb57c67-d1e9-4961-af73-d39adbed2495",
+      "comment": "Resize Window",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2dfe3933-7916-426e-976f-3ef65ce6d4e2",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dd2fa3c-e696-4343-a2fb-36b3cf140b6f",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e103eda4-3e2a-48a5-bcc5-eda72a37417c",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "492ea53d-81bb-4d52-a958-7f9565c66dd8",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "319be7ba-f469-4642-896a-0459a918015b",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8eb1729c-3af7-44cf-8b63-32fb71d699a0",
+      "comment": "Assert Button Value Is 'count is 5'",
+      "command": "assertValue",
+      "target": "xpath=//button[contains(.,'count is 5')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00fe13a9-c7d8-4d30-9c81-951e968bdb15",
+      "comment": "Close the Window",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1ea2182d-e961-4e12-a247-7bcb0e5dd329",
+    "name": "Vite Test 8",
+    "commands": [{
+      "id": "f01a6726-4e3a-4004-86d1-133bf01df1aa",
+      "comment": "Open Test Vite Site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e027eec-2b28-44f3-8291-7dec3f2575f7",
+      "comment": "Resize Window",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "028d234f-5023-4ada-93cc-87bdbb238e7c",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b44617ec-fb9e-4f40-9386-b6798029e149",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53006d69-dbf9-4e10-8c69-833d9eb56040",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec6b69a3-db77-4e61-965a-54ca8531ea7e",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "72d40c50-64e2-4544-81bb-9364bbce47db",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2522855-d99c-4f46-ba29-0d23da3b5487",
+      "comment": "Assert Button Value Is 'count is 5'",
+      "command": "assertValue",
+      "target": "xpath=//button[contains(.,'count is 5')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "062b98f0-cff5-4fa6-95ff-4563342325a4",
+      "comment": "Close the Window",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "68116734-f5f7-421e-bc74-dd5a4c58142a",
+    "name": "Vite Test 10",
+    "commands": [{
+      "id": "d6f33bc9-1767-46d2-b1db-a53c6a65c035",
+      "comment": "Open Test Vite Site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "123ec842-6dbd-4f1d-bb73-98c975553640",
+      "comment": "Resize Window",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57d0b9e0-79da-4847-b891-7d8b0b7bad9f",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae59ead3-f5a4-4305-926b-49f8b99b4617",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bdec42f-aef9-4dfa-8cc2-eac89838ac4a",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c055f31-53bc-44a9-87f9-f111772cd9e1",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "308bb281-0271-4a11-a6cc-1b5ec4fbaad3",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09fce192-6741-44f8-83cf-39a477c0aa1c",
+      "comment": "Assert Button Value Is 'count is 5'",
+      "command": "assertValue",
+      "target": "xpath=//button[contains(.,'count is 5')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14a2802a-1a2c-45f1-964e-d72355ce01bc",
+      "comment": "Close the Window",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "565c6451-facb-4b54-99c3-9603df7624f5",
+    "name": "Vite Test 9",
+    "commands": [{
+      "id": "ef2d3157-5104-4110-8b2c-96990d81715a",
+      "comment": "Open Test Vite Site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18f2f359-33cb-4d52-b9c8-a4eb8dc3aec9",
+      "comment": "Resize Window",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15295c35-b715-48ca-a081-ce455b47a485",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "611bcc3d-656c-4cdc-8e9c-99f64bf307a1",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e518c1b-8da4-4bd7-a730-efdab7e462ee",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "12be5916-4aaa-4d4c-add7-ffa6c5feee15",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a60f8db-8d67-406c-9d72-9a5f28217a6b",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6e3be3f-9a29-435b-86ae-c10616004e87",
+      "comment": "Assert Button Value Is 'count is 5'",
+      "command": "assertValue",
+      "target": "xpath=//button[contains(.,'count is 5')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24ced3cc-b5e9-4395-92f1-822a40e80e16",
+      "comment": "Close the Window",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "8445e5a4-c6a6-4d5b-89dc-ffe404d5018e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": true,
+    "timeout": 300,
+    "tests": ["e30c32c8-71c9-44cf-b6f4-82361c1a3468", "76ebaf3f-64fc-4979-bc94-f3e176f7cb91", "d128d43e-d2fd-4cc6-8605-16d9d6576e63", "8cb647b8-8a5f-49f7-b091-9e60748e7302", "540c2906-c7a7-4fba-8b39-08f63419d413", "d792fde5-c97f-4b82-ae3b-7042c9b1a1cc", "f4a17e5a-627b-45bc-a8b7-1baec4226ce4", "1ea2182d-e961-4e12-a247-7bcb0e5dd329", "565c6451-facb-4b54-99c3-9603df7624f5", "68116734-f5f7-421e-bc74-dd5a4c58142a"]
+  }],
+  "urls": ["http://host.docker.internal:8080/"],
+  "plugins": []
+}

@@ -1,0 +1,120 @@
+# To execute this docker compose yml file use `docker compose -f docker-compose-v3-full-grid-tracing.yml up`
+# Add the `-d` flag at the end for detached execution
+# To stop the execution, hit Ctrl+C, and then `docker compose -f docker-compose-v3-full-grid-tracing.yml down`
+version: "3"
+networks:
+  selenium-grid:
+    name: selenium-grid
+    ipam:
+      config:
+        - subnet: 172.90.10.0/24
+
+volumes:
+  recreation-s3mock:
+    name: "recreation-s3mock"
+
+services:
+  jaeger:
+    container_name: selenium-jaeger
+    image: jaegertracing/all-in-one:1.60
+    restart: unless-stopped
+    ports:
+      - "16686:16686"
+      - "14269:14269"
+      - "4317:4317"
+    networks:
+      - selenium-grid
+  selenium-event-bus:
+    image: selenium/event-bus:4.25.0-20240922
+    restart: unless-stopped
+    container_name: selenium-event-bus
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "5557:5557"
+    networks:
+      - selenium-grid
+    depends_on:
+      - jaeger
+    environment:
+      - SE_ENABLE_TRACING=true
+      - SE_OTEL_TRACES_EXPORTER=otlp
+      - SE_OTEL_EXPORTER_ENDPOINT=http://jaeger:4317
+  selenium-sessions:
+    container_name: selenium-sessions
+    image: selenium/sessions:4.25.0-20240922
+    restart: unless-stopped
+    ports:
+      - "5556:5556"
+    networks:
+      - selenium-grid
+    depends_on:
+      - selenium-event-bus
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-event-bus
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_ENABLE_TRACING=true
+      - SE_OTEL_TRACES_EXPORTER=otlp
+      - SE_OTEL_EXPORTER_ENDPOINT=http://jaeger:4317
+  selenium-session-queue:
+    container_name: selenium-session-queue
+    image: selenium/session-queue:4.25.0-20240922
+    restart: unless-stopped
+    ports:
+      - "5559:5559"
+    networks:
+      - selenium-grid
+    environment:
+      - SE_ENABLE_TRACING=true
+      - SE_OTEL_TRACES_EXPORTER=otlp
+      - SE_OTEL_EXPORTER_ENDPOINT=http://jaeger:4317
+      - SE_SESSION_REQUEST_TIMEOUT=600
+      - SE_SESSION_RETRY_INTERVAL=15
+  selenium-distributor:
+    container_name: selenium-distributor
+    image: selenium/distributor:4.25.0-20240922
+    restart: unless-stopped
+    ports:
+      - "5553:5553"
+    networks:
+      - selenium-grid
+    depends_on:
+      - selenium-event-bus
+      - selenium-sessions
+      - selenium-session-queue
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-event-bus
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_SESSIONS_MAP_HOST=selenium-sessions
+      - SE_SESSIONS_MAP_PORT=5556
+      - SE_SESSION_QUEUE_HOST=selenium-session-queue
+      - SE_SESSION_QUEUE_PORT=5559
+      - SE_ENABLE_TRACING=true
+      - SE_OTEL_TRACES_EXPORTER=otlp
+      - SE_OTEL_EXPORTER_ENDPOINT=http://jaeger:4317
+  selenium-router:
+    container_name: selenium-router
+    image: selenium/router:4.25.0-20240922
+    restart: unless-stopped
+    ports:
+      - "4444:4444"
+    networks:
+      - selenium-grid
+    depends_on:
+      - selenium-distributor
+      - selenium-sessions
+      - selenium-session-queue
+    environment:
+      - SE_DISTRIBUTOR_HOST=selenium-distributor
+      - SE_DISTRIBUTOR_PORT=5553
+      - SE_SESSIONS_MAP_HOST=selenium-sessions
+      - SE_SESSIONS_MAP_PORT=5556
+      - SE_SESSION_QUEUE_HOST=selenium-session-queue
+      - SE_SESSION_QUEUE_PORT=5559
+      - SE_ENABLE_TRACING=true
+      - SE_OTEL_TRACES_EXPORTER=otlp
+      - SE_OTEL_EXPORTER_ENDPOINT=http://jaeger:4317
+      - SE_SESSION_REQUEST_TIMEOUT=600
+      - SE_SESSION_RETRY_INTERVAL=15

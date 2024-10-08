@@ -1,0 +1,32 @@
+x-side-runner-template: &side-runner-template
+    image: selenium-side-runner
+    environment:
+      - SE_HOST=selenium-router
+    networks:
+      - selenium-grid
+    command:
+      - "-d -j \"--detectOpenHandles\""
+
+networks:
+  selenium-grid:
+    external: true
+
+services:
+  selenium-side-runner-test-site-x1:
+    <<: *side-runner-template
+    volumes:
+      - '../out:/root/out'
+      - '../resources/tests/test-site/x_1:/sides'
+    profiles: ['',test-site-x1]
+  selenium-side-runner-test-site-x10:
+    <<: *side-runner-template
+    volumes:
+      - '../out:/root/out'
+      - '../resources/tests/test-site/x_10:/sides'
+    profiles: [test-site-x10]
+  selenium-side-runner-test-site-xn:
+    <<: *side-runner-template
+    volumes:
+      - '../out:/root/out'
+      - '../resources/tests/test-site/x_n:/sides'
+    profiles: [test-site-xn]

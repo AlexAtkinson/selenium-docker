@@ -1,0 +1,120 @@
+{
+  "id": "09ab0e1f-f924-4808-9329-a3a7ba240895",
+  "version": "2.0",
+  "name": "Vite Demo",
+  "url": "http://host.docker.internal:8080",
+  "tests": [{
+    "id": "e30c32c8-71c9-44cf-b6f4-82361c1a3468",
+    "name": "Vite Test",
+    "commands": [{
+      "id": "f5544f6f-7ab3-4670-b93e-305195507f3a",
+      "comment": "Open Test Vite Site",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "020be628-9e9e-44cf-a88f-98c6f7b9c1cc",
+      "comment": "Resize Window",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4458801d-1202-4212-a33d-db716d35d5c9",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94d940c6-13e8-444d-9a8b-84c117130db4",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f63e68b7-8a6c-4047-93d7-fef8c866cd34",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46b8f36c-98a4-40b3-aa7c-20f7c07cb0f9",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b5f9a89-f2a4-43cc-a1d1-446ca36ce871",
+      "comment": "Click Button Once",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e991c5f-1dbf-4a93-b600-e7e17fa927e3",
+      "comment": "Assert Button Value Is 'count is 5'",
+      "command": "assertValue",
+      "target": "xpath=//button[contains(.,'count is 5')]",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'count is 5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0473b1c0-857c-4efb-a77b-8b9f5972f2df",
+      "comment": "Close the Window",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "8445e5a4-c6a6-4d5b-89dc-ffe404d5018e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": true,
+    "timeout": 300,
+    "tests": ["e30c32c8-71c9-44cf-b6f4-82361c1a3468"]
+  }],
+  "urls": ["http://host.docker.internal:8080/"],
+  "plugins": []
+}
